@@ -11,13 +11,13 @@
     "request",
     "post"
   ],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git@github.com:secoif/file-uploader.git"
   },
   "engines": {
-    "node": "~0.6.7"
+    "node": "~0.4 || ~0.6"
   },
   "dependencies": {
     "step": "0.0.5",
