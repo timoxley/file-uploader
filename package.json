@@ -1,0 +1,25 @@
+{
+  "author": "Tim Oxley <secoif@gmail.com> (unit.io)",
+  "name": "file-uploader",
+  "description": "Easily test uploading files to your API",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:secoif/file-uploader.git"
+  },
+  "engines": {
+    "node": "~0.6.7"
+  },
+  "dependencies": {
+    "step": "0.0.5",
+    "mime": "~1.2.4"
+  },
+  "devDependencies": {
+    "chai": "~0.1.6",
+    "express": "~2.5.5"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --ui tdd ./tests/index.js"
+  }
+}
