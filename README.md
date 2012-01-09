@@ -1,7 +1,7 @@
 # File Uploader
 
 This module allows you to easily test the file uploading capabilities of
-your API by alowing you to perform a multipart file upload programatically. 
+your API by allowing you to perform a multipart file upload programmatically. 
 
 ## Usage
 
