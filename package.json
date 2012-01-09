@@ -1,8 +1,17 @@
 {
   "author": "Tim Oxley <secoif@gmail.com> (unit.io)",
   "name": "file-uploader",
-  "description": "Easily test uploading files to your API",
-  "version": "0.0.1",
+  "description": "Programmatic multipart file uploads",
+  "keywords": [
+    "test",
+    "http",
+    "upload",
+    "file",
+    "api",
+    "request",
+    "post"
+  ],
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git@github.com:secoif/file-uploader.git"
@@ -21,5 +30,6 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --ui tdd ./tests/index.js"
-  }
+  },
+  "homepage": "https://github.com/secoif/file-uploader"
 }
