@@ -7,7 +7,7 @@ var uploader = require('../index.js')
 
 var options = {
   host : 'localhost',
-  port : 4000,
+  port : 6879,
   path : '/upload',
   method : 'POST',
   encoding : 'utf8'
