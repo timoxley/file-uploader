@@ -11,7 +11,7 @@
     "request",
     "post"
   ],
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "git@github.com:timoxley/file-uploader.git"
