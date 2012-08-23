@@ -17,7 +17,7 @@
     "url": "git@github.com:timoxley/file-uploader.git"
   },
   "engines": {
-    "node": "~0.4 || ~0.6"
+    "node": "~0.4 || ~0.6 || ~0.8"
   },
   "dependencies": {
     "step": "0.0.5",
