@@ -27,10 +27,14 @@ uploader.postFile(options, file, {Cookie: cookie}, function(err, res) {
 
 ```
 
-See tests for more details.
+## Alternative: Superagent/Supertest
 
-## TODO
-Way more tests.
+Recently I've been using the
+[superagent](http://visionmedia.github.com/superagent/#multipart-requests)
+and [supertest](https://github.com/visionmedia/supertest) modules to send/test
+file attachments. The interface is clean, and they
+provide other essential HTTP requesting and testing functionality.
+I recommend you try them out before doing anything else, ever.
 
 ## Credits
 Code originally taken(stolen?) from Anand Prakash: http://www.anandprakash.net/2011/10/20/server-side-multipartform-data-uploads-from-nodejs/
