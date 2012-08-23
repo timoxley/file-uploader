@@ -129,7 +129,7 @@ function postFile(options, filePath, headers, callback) {
     },
     function(err, fileContents) {
       if (err) return callback(err)
-      postData(null, [{type: mimeType, keyname: 'attachment', valuename: filename, data: fileContents}], options, headers, this)
+      postData(null, [{type: mimeType, keyname: options.keyname || 'attachment', valuename: filename, data: fileContents}], options, headers, this)
     },
     function(err, response) {
       callback(err, response)
