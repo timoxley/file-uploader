@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/timoxley/file-uploader.png)](http://travis-ci.org/timoxley/file-uploader)
 # File Uploader
 
 This module allows you to easily test the file uploading capabilities of
