@@ -14,10 +14,7 @@
   "version": "0.0.4",
   "repository": {
     "type": "git",
-    "url": "git@github.com:timoxley/file-uploader.git"
-  },
-  "engines": {
-    "node": "~0.4 || ~0.6 || ~0.8"
+    "url": "git+ssh://git@github.com/timoxley/file-uploader.git"
   },
   "dependencies": {
     "step": "0.0.6",
@@ -30,7 +27,14 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --ui tdd -R spec ./tests/index.js"
+    "test": "mocha --ui tdd -R spec ./tests/index.js"
   },
-  "homepage": "https://github.com/timoxley/file-uploader"
+  "homepage": "https://github.com/timoxley/file-uploader",
+  "bugs": {
+    "url": "https://github.com/timoxley/file-uploader/issues"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "license": "ISC"
 }
