@@ -22,7 +22,7 @@ function getFormDataForPost(fields, files) {
   }
   function encodeFilePart(boundary,type,name,filename) {
     var returnPart = "--" + boundary + "\r\n"
-    returnPart += "Content-Disposition: form-data name=\"" + name + "\" filename=\"" + filename + "\"\r\n"
+    returnPart += "Content-Disposition: form-data; name=\"" + name + "\"; filename=\"" + filename + "\"\r\n"
     returnPart += "Content-Type: " + type + "\r\n\r\n"
     return returnPart
   }
@@ -146,4 +146,3 @@ var interface = {
 }
 
 module.exports = interface
-
