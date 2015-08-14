@@ -1,7 +1,7 @@
 [![build status](https://secure.travis-ci.org/timoxley/file-uploader.png)](http://travis-ci.org/timoxley/file-uploader)
 # File Uploader
 
-Easily perform programattic multi-part file uploads. Designed for use within test suites. 
+Easily perform programmatic multi-part file uploads. Designed for use within test suites. 
 
 ## Usage
 
