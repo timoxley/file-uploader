@@ -1,9 +1,14 @@
 var express = require('express')
-var assert = require('chai').assert
+var busboy = require('connect-busboy')
 var path = require('path')
 var fs = require('fs')
+var bl = require('bl')
+var test = require('tape')
 
 var uploader = require('../index.js')
+
+var filename = __filename
+var fileContent = fs.readFileSync(filename, 'utf8')
 
 var options = {
   host : 'localhost',
@@ -13,26 +18,33 @@ var options = {
   encoding : 'utf8'
 }
 
-var file = path.join(__dirname, 'fixtures', 'test_image.jpg')
-suite('uploader', function() {
-  suite('postFile', function() {
+test('can upload files', function(t) {
+  var targetSize = fs.statSync(filename).size
 
-    test('can upload files', function(done) {
-      var targetSize = fs.statSync(file).size
+  var app = express()
+  app.use(busboy())
+  app.use(function(req, res) {
+    req.busboy.on('file', function(fieldname, fileStream, filename, encoding, mimetype) {
+      fileStream.pipe(bl(function(err, data) {
+        if (err) return t.end(err)
+        t.equal(String(data), String(fileContent))
+        res.end()
+      }))
+    })
+    req.pipe(req.busboy)
+  })
 
-      var app = express.createServer()
-      app.use(express.bodyParser())
-      app.listen(options.port)
+  var server = app.listen(options.port, function(err) {
+    if (err) return t.end(err)
 
-      app.post(options.path, function(req, res){
-        assert.ok(req.files)
-        res.json(req.files.attachment)
-      })
+    app.post(options.path, function(req, res){
+      t.ok(req.files)
+    })
 
-      uploader.postFile(options, file, {}, function(err, res) {
-        var body = JSON.parse(res.body)
-        assert.equal(targetSize, body.size)
-        done()
+    uploader.postFile(options, filename, {}, function(err, res) {
+      server.close(function(err) {
+        t.ifError(err)
+        t.end(err)
       })
     })
   })
